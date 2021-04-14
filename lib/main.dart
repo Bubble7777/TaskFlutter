@@ -181,7 +181,7 @@ class _RowLayoutState extends State<RowLayout>
 
   bool validateNumber(String value) {
     _valueForm = int.parse(value);
-    if (value.isEmpty) {
+    if (value.isEmpty || _valueForm < 0 || _valueForm > 100) {
       return false;
     } else {
       return true;
@@ -331,7 +331,7 @@ class _ColumnLayoutState extends State<ColumnLayout>
 
   bool validateNumber(String value) {
     _valueForm = int.parse(value);
-    if (value.isEmpty) {
+    if (value.isEmpty || _valueForm < 0 || _valueForm > 100) {
       return false;
     } else {
       return true;
